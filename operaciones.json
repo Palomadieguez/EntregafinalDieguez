@@ -1,0 +1,8 @@
+[
+  { "nombre": "Suma", "simbolo": "+" },
+  { "nombre": "Resta", "simbolo": "-" },
+  { "nombre": "Multiplicación", "simbolo": "*" },
+  { "nombre": "División", "simbolo": "/" },
+  { "nombre": "Porcentaje", "simbolo": "%" },
+  { "nombre": "Potencia", "simbolo": "^" }
+]
