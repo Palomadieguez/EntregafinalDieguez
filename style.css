@@ -1,35 +1,100 @@
+/* ----------------------
+   BODY
+----------------------- */
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111; /* fondo oscuro */
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background: #f5f5f5;
 }
 
-h1, h2 {
-    text-align: center;
+/* ----------------------
+   CALCULADORA
+----------------------- */
+.calculator {
+    background: #222; /* fondo de la calculadora */
+    padding: 20px;
+    border-radius: 15px;
+    width: 260px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+    /* CENTRADO VISUAL */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section {
-    margin: 20px 0;
-    padding: 10px;
+/* ----------------------
+   BOTONES
+----------------------- */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-.card {
-    background: white;
-    padding: 12px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
-    display: inline-block;
-}
-
-button {
-    background: #007bff;
-    color: white;
+.btn {
+    padding: 20px;
+    background: #333;
     border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    color: white;
     cursor: pointer;
+    transition: 0.2s;
 }
-button:hover {
-    background: #0056b3;
+
+.btn:hover {
+    background: #444;
+}
+
+.equal {
+    grid-column: span 1;
+    background: #09f;
+}
+
+.equal:hover {
+    background: #08c;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* ----------------------
+   DISPLAY
+----------------------- */
+
+/* Fusionar display-top y display para verse como un solo cuadro */
+.display-top {
+    width: 100%;
+    min-height: 20px;
+    padding: 5px 15px;
+    background: #000;        /* mismo fondo que display */
+    color: #ca0678;          /* mismo color que display */
+    font-size: 1.2em;        /* un poco más pequeño */
+    text-align: right;
+    border-radius: 10px 10px 0 0; /* esquinas superiores redondeadas */
+    margin-bottom: 0;        /* se ve pegado al display */
+    max-width: 90%;          /* deja margen lateral */
+    box-sizing: border-box;
+}
+
+.display {
+    width: 100%;
+    height: 70px;
+    background: #000;
+    color: #ff00d0;
+    font-size: 2.4em;
+    border-radius: 0 0 10px 10px; /* esquinas inferiores redondeadas */
+    padding: 10px 15px;
+    text-align: right;
+    margin-top: 0;           /* sin espacio con display-top */
+    margin-bottom: 20px;
+    max-width: 90%;          /* deja margen lateral */
+    box-sizing: border-box;
 }
