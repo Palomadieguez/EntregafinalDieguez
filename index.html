@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Turnos Médicos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Turnos Médicos</h1>
+    <div class="calculator">
 
-    <section id="contenedor-especialidades"></section>
+        <!-- Display superior (muestra la operación) -->
+        <div id="display-top" class="display-top"></div>
 
-    <h2>Turnos disponibles</h2>
-    <section id="contenedor-turnos"></section>
+        <!-- Display principal -->
+        <div id="display" class="display">0</div>
 
-    <h2>Mis turnos reservados</h2>
-    <section id="contenedor-reservas"></section>
+        <!-- Botones -->
+        <div class="buttons">
 
-    <script src="libs/sweetalert2.all.min.js"></script>
-    <script src="app.js"></script>
+            <button data-action="clear" class="btn clear">C</button>
+            <button data-action="delete" class="btn delete">DEL</button>
+            <button data-operator="/" class="btn op">/</button>
+            <button data-operator="*" class="btn op">*</button>
+
+            <button class="btn num">1</button>
+            <button class="btn num">2</button>
+            <button class="btn num">3</button>
+            <button data-operator="-" class="btn op">-</button>
+
+            <button class="btn num">4</button>
+            <button class="btn num">5</button>
+            <button class="btn num">6</button>
+            <button data-operator="+" class="btn op">+</button>
+
+            <button class="btn num">7</button>
+            <button class="btn num">8</button>
+            <button class="btn num">9</button>
+            <button class="btn equal">=</button>
+
+            <button class="btn num zero">0</button>
+            <button class="btn num">.</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
